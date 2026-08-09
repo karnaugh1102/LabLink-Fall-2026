@@ -1,196 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>LabLink</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        .get-started-wrap {
-            display: inline-block;
-            position: relative;
-        }
-
-        .get-started {
-            position: relative;
-            padding: 12px 22px;
-            overflow: visible;
-            background: linear-gradient(
-                90deg,
-                #67a5a0,
-                #38c6ba
-            );
-            color: #ffffff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition:
-                box-shadow 200ms ease,
-                transform 150ms ease;
-        }
-
-        .get-started:hover {
-            transform: translateY(-3px);
-            box-shadow:
-                0 18px 30px rgba(75, 156, 255, 0.22),
-                0 6px 12px rgba(0, 0, 0, 0.08);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LabLink — Research Candidate Matching</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-hexagons">
+      <div class="hex hex-left"></div>
+      <div class="hex hex-right"></div>
+      <div class="hex-overlap"></div>
+    </div>
+    <span class="logo-text"><span class="logo-lab">Lab</span><span class="logo-link">Link</span></span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="candidate_form.html">Find a Lab</a>
+    <a href="labform.html">Register Lab</a>
+    <a href="about.html">About</a>
+    <a href="login.html" class="nav-login">Log In</a>
+    <a href="signup.html" class="nav-signup">Sign Up</a>
+  </nav>
+  <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+</header>
 
-        <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
-            <img src="LABLINK.png" alt="LabLink" style="height: 80px; width:auto; display:block;">
-        </a>
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="candidate_form.html">Find a Lab</a>
+  <a href="labform.html">Register Lab</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Log In</a>
+  <a href="signup.html">Sign Up</a>
+</div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="pick_form.html">Get Started</a>
-            <a href="contact.html">Contact</a>
-            <a href="logout.html">Sign Out</a>
-        </nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✨ AI-Powered Research Matching</div>
+  <h1>Find Your Perfect<br><span class="hero-highlight">Research Lab</span></h1>
+  <p>LabLink matches undergraduate and graduate students with USC and UCLA research laboratories using structured compatibility scoring and AI semantic analysis — delivering ranked, explainable recommendations.</p>
+  <div class="hero-buttons">
+    <a href="candidate_form.html" class="btn-primary">Find My Lab →</a>
+    <a href="labform.html" class="btn-secondary">Register Your Lab</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-number">16+</span>
+      <span class="stat-label">Research Labs</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-number">2</span>
+      <span class="stat-label">Scoring Layers</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-number">104</span>
+      <span class="stat-label">Matching Rules</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-number">AI</span>
+      <span class="stat-label">Semantic Engine</span>
+    </div>
+  </div>
+</section>
 
-    </header>
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="section-label">How It Works</div>
+  <h2>From Profile to Perfect Match in 4 Steps</h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <div class="step-icon">📋</div>
+      <h3>Build Your Profile</h3>
+      <p>Fill in your research field, skills, career goals, and availability. Takes less than 5 minutes.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <div class="step-icon">✍️</div>
+      <h3>Write Your Statement</h3>
+      <p>Describe your research interests in your own words. Our AI reads this to understand your goals beyond keywords.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <div class="step-icon">🤖</div>
+      <h3>AI Matches You</h3>
+      <p>LabLink runs rule-based scoring and AI semantic analysis simultaneously to rank every lab by compatibility.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step-card">
+      <div class="step-number">04</div>
+      <div class="step-icon">🔬</div>
+      <h3>Connect with Labs</h3>
+      <p>See your ranked matches with transparent score breakdowns. Know exactly why each lab was recommended.</p>
+    </div>
+  </div>
+</section>
 
-    <main>
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="section-label">Why LabLink</div>
+  <h2>Built for Serious Research Candidates</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon teal-bg">⚖️</div>
+      <h3>Rule-Based Scoring</h3>
+      <p>104 weighted matching rules across field alignment, technique overlap, and goals compatibility. Every point is earned by a specific match — no black boxes.</p>
+      <div class="feature-tag">Structured • Transparent • Explainable</div>
+    </div>
+    <div class="feature-card featured">
+      <div class="feature-badge">AI Powered</div>
+      <div class="feature-icon purple-bg">🧠</div>
+      <h3>AI Semantic Matching</h3>
+      <p>Powered by Cohere Embed AI. Understands the meaning of your research statement — not just keywords. Finds labs whose work genuinely aligns with yours.</p>
+      <div class="feature-tag">Cohere • embed-v4.0 • Cosine Similarity</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon navy-bg">📊</div>
+      <h3>Three-Score Display</h3>
+      <p>Every lab recommendation shows three separate scores — rule-based, AI semantic, and combined — so you understand exactly what is driving each match.</p>
+      <div class="feature-tag">Rule % • AI % • Combined %</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon teal-bg">🎯</div>
+      <h3>Why It Matches</h3>
+      <p>Every result comes with a detailed breakdown listing the specific variables that drove the match — from technique overlaps to career pathway alignment.</p>
+      <div class="feature-tag">Variable-level • Specific • Actionable</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon navy-bg">🔒</div>
+      <h3>Secure & Private</h3>
+      <p>Your profile data is stored securely in Supabase. API keys are server-side only. Your research statement never appears in any public log.</p>
+      <div class="feature-tag">Supabase • Vercel • Encrypted</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon purple-bg">⚡</div>
+      <h3>Fast Results</h3>
+      <p>Pre-computed lab embeddings mean only one AI API call per submission. Results delivered in seconds — not minutes.</p>
+      <div class="feature-tag">1 API call • Pre-computed • Instant</div>
+    </div>
+  </div>
+</section>
 
-        <section class="hero">
+<!-- SCORING EXPLAINER -->
+<section class="scoring-section">
+  <div class="scoring-content">
+    <div class="scoring-text">
+      <div class="section-label">The Algorithm</div>
+      <h2>Two Layers, One Score</h2>
+      <p>LabLink combines structured data matching with AI semantic analysis to produce a single, reliable compatibility score.</p>
+      <div class="scoring-formula">
+        <div class="formula-row">
+          <span class="formula-label teal">Rule-Based Score</span>
+          <span class="formula-weight">× 80%</span>
+        </div>
+        <div class="formula-plus">+</div>
+        <div class="formula-row">
+          <span class="formula-label purple">AI Semantic Score</span>
+          <span class="formula-weight">× 20%</span>
+        </div>
+        <div class="formula-equals">=</div>
+        <div class="formula-result">Combined Match %</div>
+      </div>
+    </div>
+    <div class="scoring-cards">
+      <div class="score-example">
+        <div class="score-lab-name">Garcia Computational Genomics Lab</div>
+        <div class="score-badges">
+          <span class="badge-teal">Structure: 74%</span>
+          <span class="badge-purple">AI: 81%</span>
+          <span class="badge-combined">Match: 75%</span>
+        </div>
+        <div class="score-bars">
+          <div class="score-bar-row">
+            <span>Field Match</span>
+            <div class="bar"><div class="bar-fill teal-fill" style="width:80%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <span>Technique Overlap</span>
+            <div class="bar"><div class="bar-fill teal-fill" style="width:65%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <span>Goals & Logistics</span>
+            <div class="bar"><div class="bar-fill teal-fill" style="width:72%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <span>AI Semantic</span>
+            <div class="bar"><div class="bar-fill purple-fill" style="width:81%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <h2>
-                Building Perfect Research Labs
-            </h2>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to Find Your Research Home?</h2>
+  <p>Join students and PIs at USC and UCLA already using LabLink to make better research connections.</p>
+  <div class="cta-buttons">
+    <a href="candidate_form.html" class="btn-primary large">Find My Lab Match →</a>
+    <a href="labform.html" class="btn-outline large">Register a Lab</a>
+  </div>
+</section>
 
-            <p>
-                LabLink matches students and research laboratories
-                based on research interests, skills, career goals,
-                and experience.
-            </p>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <span class="logo-lab">Lab</span><span class="logo-link-light">Link</span>
+    </div>
+    <div class="footer-links">
+      <a href="candidate_form.html">Find a Lab</a>
+      <a href="labform.html">Register Lab</a>
+      <a href="about.html">About</a>
+      <a href="login.html">Log In</a>
+    </div>
+    <p class="footer-note">Semantic matching powered by Cohere Embed AI · Built on Supabase & Vercel</p>
+    <p class="footer-copy">© 2026 LabLink · USC Research Project</p>
+  </div>
+</footer>
 
-            <a
-                href="pick_form.html"
-                class="get-started-wrap"
-            >
-                <button
-                    class="get-started"
-                    type="button"
-                >
-                    Get Started
-                </button>
-            </a>
-
-        </section>
-
-        <section class="features">
-
-            <div class="card">
-
-                <h3>
-                    Skill-Based Recruiting
-                </h3>
-
-                <p>
-                    Compare candidate skills and research experience
-                    with laboratory requirements.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-                    Explore Opportunities
-                </h3>
-
-                <p>
-                    Discover laboratories across neuroscience,
-                    oncology, genetics, and other research fields.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-                    AI-Powered Matching
-                </h3>
-
-                <p>
-                    Receive personalized recommendations using
-                    structured and AI semantic matching.
-                </p>
-
-            </div>
-
-        </section>
-
-        <section
-            class="steps"
-            id="how-it-works"
-        >
-
-            <h2>
-                How It Works
-            </h2>
-
-            <div class="step">
-
-                <h3>
-                    1
-                </h3>
-
-                <p>
-                    Select whether you are a student or a laboratory.
-                </p>
-
-            </div>
-
-            <div class="step">
-
-                <h3>
-                    2
-                </h3>
-
-                <p>
-                    Create an account and complete your research profile.
-                </p>
-
-            </div>
-
-            <div class="step">
-
-                <h3>
-                    3
-                </h3>
-
-                <p>
-                    View ranked matches and compatibility explanations.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>
-            © 2026 LabLink
-        </p>
-
-    </footer>
-
+<script>
+function toggleMenu() {
+  var nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+}
+// Animate stats on scroll
+var animated = false;
+window.addEventListener('scroll', function() {
+  if (animated) return;
+  var stats = document.querySelector('.hero-stats');
+  if (!stats) return;
+  var rect = stats.getBoundingClientRect();
+  if (rect.top < window.innerHeight) {
+    animated = true;
+    document.querySelectorAll('.stat-number').forEach(function(el) {
+      el.style.animation = 'fadeInUp 0.6s ease forwards';
+    });
+  }
+});
+</script>
 </body>
 </html>
